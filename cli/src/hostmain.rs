@@ -1,6 +1,6 @@
-pub fn host_main() -> anyhow::Result<()> {
-    use crate::Options;
+use crate::Options;
 
+pub fn host_main() -> anyhow::Result<()> {
     let opts = Options::parse();
     todo!("{:#?}", opts)
 }

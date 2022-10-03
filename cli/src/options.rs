@@ -12,7 +12,15 @@ pub struct Options {
 
 impl Options {
     pub fn parse() -> Self {
-        <Self as Parser>::parse()
+        Self::parse_args(std::env::args())
+    }
+
+    pub fn parse_args<I, T>(args: I) -> Self
+    where
+        I: IntoIterator<Item = T>,
+        T: Into<std::ffi::OsString> + Clone,
+    {
+        <Self as Parser>::parse_from(args)
     }
 }
 
@@ -29,3 +37,6 @@ pub struct RunOptions {
     #[clap()]
     path: PathBuf,
 }
+
+#[cfg(test)]
+mod tests;
