@@ -105,7 +105,8 @@ checksum = "71d96e3f3c0b6325d8ccd83c33b28acb183edcb6c67938ba104ec546854b0882"
 name = "metropoli-host"
 version = "0.1.0"
 dependencies = [
- "wasmi",
+ "anyhow",
+ "metropoli-polis",
 ]
 
 [[package]]
@@ -114,6 +115,15 @@ version = "0.1.0"
 dependencies = [
  "anyhow",
  "clap",
+ "metropoli-host",
+]
+
+[[package]]
+name = "metropoli-polis"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "wasmi",
 ]
 
 [[package]]

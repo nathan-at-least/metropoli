@@ -1,14 +1,12 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
-}
+use std::path::Path;
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+pub fn run_polis<P>(poliswasm: P) -> anyhow::Result<()>
+where
+    P: AsRef<Path>,
+{
+    use metropoli_polis::Polis;
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
+    let pwbytes = std::fs::read(poliswasm)?;
+    let polis = Polis::instantiate(pwbytes)?;
+    todo!("{:#?}", polis);
 }

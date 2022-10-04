@@ -1,5 +1,5 @@
 [package]
-name = "metropoli-host-cli"
+name = "metropoli-polis"
 version.workspace = true
 edition.workspace = true
 
@@ -7,7 +7,4 @@ edition.workspace = true
 
 [dependencies]
 anyhow.workspace = true
-clap.workspace = true
-
-[dependencies.metropoli-host]
-path = "../host"
+wasmi.workspace = true
