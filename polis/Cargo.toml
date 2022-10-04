@@ -8,3 +8,6 @@ edition.workspace = true
 [dependencies]
 anyhow.workspace = true
 wasmi.workspace = true
+
+[dev-dependencies]
+wabt.workspace = true

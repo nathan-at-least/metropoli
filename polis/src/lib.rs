@@ -17,3 +17,6 @@ impl Polis {
         Ok(Polis { modref })
     }
 }
+
+#[cfg(test)]
+mod tests;

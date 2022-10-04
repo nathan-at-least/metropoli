@@ -8,6 +8,14 @@ The term "redecentralized" is a philosophical design criteria to create a techno
 
 This project is an exploratory prototype. There's no guarantee it will be usable yet.
 
+## Build
+
+Requires `cargo` (and `rustc`) to build with `cargo build`.
+
+Testing requires `cmake` to run `cargo test`.
+
+# Roadmap
+
 ## Ambitions
 
 The audicious goals for metropoli include:
