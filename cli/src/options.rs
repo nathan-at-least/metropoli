@@ -1,4 +1,4 @@
-/// Commandline options-related types
+//! Commandline options-related types
 use clap::{Parser, Subcommand};
 use std::path::PathBuf;
 
@@ -24,6 +24,7 @@ impl Options {
     }
 }
 
+/// Subcommands for the binary
 #[derive(Debug, Subcommand)]
 pub enum Command {
     Run(RunOptions),
@@ -35,7 +36,7 @@ pub enum Command {
 pub struct RunOptions {
     /// The path to a polis WASM file
     #[clap()]
-    path: PathBuf,
+    pub path: PathBuf,
 }
 
 #[cfg(test)]
