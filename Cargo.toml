@@ -1,6 +1,8 @@
 [workspace]
 members = [
   "cli",
+  "host",
+  "polis",
 ]
 
 [workspace.package]
@@ -9,6 +11,8 @@ edition = "2021"
 
 [workspace.dependencies]
 anyhow = "1.0.65"
+wabt = "0.10.0"
+wasmi = "0.8.0"
 
 [workspace.dependencies.clap]
 version = "4.0.8"
