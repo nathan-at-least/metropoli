@@ -8,11 +8,19 @@ The term "redecentralized" is a philosophical design criteria to create a techno
 
 This project is an exploratory prototype. There's no guarantee it will be usable yet.
 
-## Build
+## Build Requirements
 
-Requires `cargo` (and `rustc`) to build with `cargo build`.
+Base toolchain requirements: `cargo` and the `wasm32-unknown-unknown` `rustc` backend.
 
-Testing requires `cmake` to run `cargo test`.
+- Install `cargo` via https://rustup.rs
+- Install the WASM compilation target with:
+  ```
+  rustup target install wasm32-unknown-unknown
+  ```
+
+Testing toolchain requirements: `cmake`
+
+- On Debian-like systems: `sudo apt-get install cmake`
 
 # Roadmap
 
